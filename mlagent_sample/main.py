@@ -5,7 +5,7 @@ import sys
 from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs.side_channel.engine_configuration_channel import EngineConfig, EngineConfigurationChannel
 
-env_name = "../unity-binary/MyMLAgent"
+env_name = "../unity-binary/CameraAgent/MyMLAgent"
 
 print("Python Version")
 print(sys.version)
