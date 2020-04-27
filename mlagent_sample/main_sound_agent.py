@@ -47,7 +47,8 @@ if vis_obs:
     plt.subplot(211)
     plt.imshow(obs[0,:,:,:])
     plt.subplot(212)
-    lines = plt.plot(range(len(sound_obs)), sound_obs)[0]
+
+    lines = plt.plot(range(128), sound_obs[0:128], range(128), sound_obs[128:256])
     plt.ylim([0, 0.05])
     plt.xlim([0, 30])
     plt.pause(0.001)
@@ -85,7 +86,8 @@ for episode in range(10):
         plt.subplot(211)
         plt.imshow(obs[0, :, :, :])
         plt.subplot(212)
-        lines.set_data(range(len(sound_obs)), sound_obs)
+        lines[0].set_data(range(128), sound_obs[0:128])
+        lines[1].set_data(range(128), sound_obs[128:256])
         plt.pause(0.001)
     print("Total reward this episode: {}".format(episode_rewards))
 
